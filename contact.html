@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | KING DAVID</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">KING DAVID</div>
+    <nav id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Got a question or want to work together? Fill out the form below!</p>
+    
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="email-button">Send Message</button>
+    </form>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 John Doe. Built with ❤ in pure HTML & CSS</p>
+    <div class="socials">
+      <a href="#">GitHub</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+  <script>
+  function sendMail(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const subject = encodeURIComponent("Portfolio Contact from " + name);
+    const body = encodeURIComponent(
+      `Hi John,\n\nYou have a new message from your portfolio site:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+
+    // Opens Gmail in a new tab (browser-based)
+    `const gmailURL = https://Gmail.google.com/mail/?view=cm&fs=1&to=okokingdavido@gmail.com&su=${subject}&body=${body};
+    window.open(gmailURL, '_blank');`
+  }
+</script>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

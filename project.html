@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | kingdavid</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">John Doe</div>
+    <nav id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img src="img/PORTFOILO.png" alt="Project 1">
+        <div class="card-content">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio site built using HTML, CSS, and JavaScript. Fully responsive and animated.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img src="img/WEATHER.jpeg" alt="Project 2">
+        <div class="card-content">
+          <h3>Weather App</h3>
+          <p>A weather app using real-time API data with a clean UI and smooth transitions.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <img src="img/LANDING.jpeg" alt="Project 3">
+        <div class="card-content">
+          <h3>Landing Page</h3>
+          <p>A modern landing page layout using Flexbox and scroll animations for a startup concept.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 John Doe. Built with ❤ in pure HTML & CSS</p>
+    <div class="socials">
+      <a href="#">GitHub</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | kingdavid</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">King David</div>
+    <nav id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <section class="about-section">
+  <div class="about-container">
+    <!-- Profile Image -->
+    <img src="img/Snapchat-1882199990(0).jpg" alt="daves's Photo" class="about-photo" />
+
+    <!-- About Text -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>King David</strong>, a passionate and self-taught frontend web developer based in Nigeria.</p>
+      <p>I specialize in building responsive and interactive websites using HTML, CSS, and JavaScript. My goal is to create beautiful user experiences with clean and efficient code.</p>
+
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>✅ HTML5</li>
+        <li>✅ CSS3 & Sass</li>
+        <li>✅ JavaScript (ES6+)</li>
+        <li>✅ Git & GitHub</li>
+        <li>✅ Responsive Design</li>
+        <li>✅ UI/UX Principles</li>
+      </ul>
+
+      <h3>Interests</h3>
+      <p>I love reading tech blogs, sketching UI mockups, and helping others learn to code. I’m also inspired by minimalist design and elegant animations.</p>
+
+      <h3>Journey</h3>
+      <ul class="timeline">
+        <li><strong>2023:</strong> Started learning HTML & CSS.</li>
+        <li><strong>2024:</strong> Built my first personal portfolio and responsive websites.</li>
+        <li><strong>2025:</strong> Focused on animations, UX, and accessibility in web design.</li>
+      </ul>
+
+      <h3>Connect with Me</h3>
+      <div class="btn-group">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" class="social-btn">GitHub</a>
+        <button class="social-btn" onclick="openModal()">Download CV</button>
+      </div>
+     <!-- CV Modal Popup -->
+<div id="cvModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>My CV</h3>
+    <img src="img/Teal & White Minimalist Resume_20250329_094747_0000.png" alt="CV Preview" class="cv-image" />
+    <a href="img/Teal & White Minimalist Resume_20250329_094747_0000.png" download class="download-btn">Download CV</a>
+  </div>
+  <script>
+  function openModal() {
+    document.getElementById('cvModal').style.display = 'flex';
+  }
+  function closeModal() {
+    document.getElementById('cvModal').style.display = 'none';
+  }
+
+  window.onclick = function(e) {
+    if (e.target.id === "cvModal") {
+      closeModal();
+    }
+  }
+</script>
+</div>
+      <blockquote class="quote">
+        "Great design is not just how it looks — it’s how it works." <br><span>– Steve Jobs</span>
+      </blockquote>
+    </div>
+  </div>
+</section>
+  <a href="https://wa.me/2349167839828" class="whatsapp-float" target="_blank" title="chat with us on whatsapp">
+        <img src="img/whatsaap-icon-logo_895118-4061.jpg" alt="whatsapp chat">
+            <!-- Mobile Menu Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>

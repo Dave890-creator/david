@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | John Doe</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+<script>
+  // Theme switch logic
+  function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('light');
+    localStorage.setItem('theme', body.classList.contains('light') ? 'light' : 'dark');
+  }
+
+  // Apply saved theme
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light');
+    }
+  });
+</script>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">King David</div>
+    <nav id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="img/Snapchat-1882199990(0).jpg" alt="Profile" class="hero-img" />
+      <div>
+        <h1>Hello, I'm <span class="highlight">David</span></h1>
+        <p>A passionate frontend web developer.</p>
+        <a href="project.html" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+   
+  <footer>
+    <p>&copy; 2025 John Doe. Built with ❤ in pure HTML & CSS</p>
+    <div class="socials">
+      <a href="#">GitHub</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- JS for mobile nav toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
